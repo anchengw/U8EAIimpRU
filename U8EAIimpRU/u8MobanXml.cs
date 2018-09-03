@@ -184,9 +184,24 @@ namespace U8EAIimpRU
                 dsc = ele.GetAttribute("dsc");
                 rs = ele.GetAttribute("succeed").Equals("0");
             }
-            result = key +"|" + dsc;
+            result = dsc;
             return rs;
         }
+        /// <summary>
+        /// 克隆复制一个字典，并清空VALUSE
+        /// </summary>
+        /// <param name="sdict"></param>
+        /// <returns></returns>
+        public Dictionary<string, string> clearCloneDictVal(Dictionary<string, string> sdict)
+        {
+            Dictionary<string, string> d1 = new Dictionary<string, string>(sdict);//克隆
+            foreach(string key in d1.Keys.ToArray()) //用ToArray()解决报错:集合已修改;可能无法执行枚举操作
+            {
+                d1[key] = "";
+            }
+            return d1;
+        }
+        
     }
 }
 /* 只生成一张单据，多张可以循环建立
