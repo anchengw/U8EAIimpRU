@@ -95,7 +95,7 @@ namespace U8EAIimpRU
             moban.rootAttr["roottag"] = moban.mobanType;
             moban.rootAttr["proc"] = "add";
 
-            moban.headerDict["code"] = "0000000195";             //单据号 相同单据号时会自动编号，但不能为空
+            moban.headerDict["code"] = "0000000001";             //单据号 相同单据号时会自动编号，但不能为空
             moban.headerDict["date"] = DateTime.Now.ToString(); //单据日期 入库日期
             moban.headerDict["receiveflag"] = "1"; //收发标志 入库单-收 1，出库单-发 0
             moban.headerDict["vouchtype"] = "10"; //'单据类型 10 产成品入库 
@@ -118,8 +118,8 @@ namespace U8EAIimpRU
             d1["free2"] = "SF20088-03PCT";//表面色 －吉屋用
             d1["quantity"] = "1";//数量
             d1["cmassunitname"] = "套";//主记量单位名称
-            d1["price"] = "888";//单价
-            d1["cost"] = "888";//金额
+            d1["price"] = "999";//单价
+            d1["cost"] = "999";//金额
             d1["makedate"] = "";//生产日期
             d1["define30"] = "YD01YG0001";//订单号 －吉屋用
             d1["iexpiratdatecalcu"] = "0";//有效期推算方式
